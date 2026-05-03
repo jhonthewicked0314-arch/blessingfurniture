@@ -1,0 +1,260 @@
+/* ==========================================================================
+   Ultra-Premium Contact Page Styles
+   Vibe: Warm, artisanal, premium craftsmanship, modern elegance
+   ========================================================================== */
+
+/* Variables */
+:root {
+    --contact-bg: #FDF8F2; /* Very soft cream */
+    --contact-form-bg: #ffffff;
+    --contact-primary: #3B2A1E; /* Deep warm wood / brown */
+    --contact-accent: #C89F56; /* Subtle Gold/Brass */
+    --contact-text: #594D42; /* Soft dark brown for readability */
+    --contact-input-bg: #F9F5F0;
+    --contact-input-border: #E8DDCE;
+}
+
+/* Base Wrapper */
+.contact-page-body {
+    background-color: var(--contact-bg);
+    overflow-x: hidden;
+}
+
+.contact-page-wrapper {
+    position: relative;
+    background-color: var(--contact-bg);
+    overflow: hidden;
+    padding: 2rem 0;
+}
+
+/* Subtle Texture Overlay */
+.bg-texture-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c89f56' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Showcase Box (Main Floating Panel) */
+.contact-showcase-box {
+    position: relative;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 20px; /* Soft radius */
+    padding: 0;
+    box-shadow: 0 30px 60px -15px rgba(59, 42, 30, 0.08), 
+                0 0 0 1px rgba(200, 159, 86, 0.15); /* Soft shadow and golden border */
+    display: flex;
+    justify-content: center;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.contact-form-inner {
+    position: relative;
+    z-index: 5;
+    padding: 4rem 5rem;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Headings */
+.contact-header .subheading {
+    font-family: 'Great Vibes', cursive;
+    color: var(--contact-accent);
+    font-size: 2rem;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.contact-header .heading {
+    font-family: 'Playfair Display', serif;
+    color: var(--contact-primary);
+    font-weight: 700;
+    font-size: 3.5rem;
+    letter-spacing: -0.02em;
+}
+
+.contact-header .description {
+    font-family: 'Inter', sans-serif;
+    color: var(--contact-text);
+    font-size: 1.1rem;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+/* Bespoke Form Inputs */
+.bespoke-form .form-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--contact-primary);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    margin-left: 0.25rem;
+}
+
+.bespoke-form .premium-input {
+    background-color: var(--contact-input-bg);
+    border: 1px solid var(--contact-input-border);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+    color: var(--contact-primary);
+    transition: all 0.3s ease;
+    box-shadow: none;
+    font-family: 'Inter', sans-serif;
+}
+
+.bespoke-form .premium-input::placeholder {
+    color: #bfaea2;
+    font-weight: 400;
+}
+
+.bespoke-form .premium-input:focus {
+    background-color: #ffffff;
+    border-color: var(--contact-accent);
+    box-shadow: 0 0 0 4px rgba(200, 159, 86, 0.1);
+    outline: none;
+}
+
+/* Select Dropdown */
+.select-wrapper {
+    position: relative;
+}
+.select-wrapper::after {
+    content: '';
+    position: absolute;
+    right: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid var(--contact-primary);
+    pointer-events: none;
+}
+.bespoke-form select.premium-input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+}
+
+/* Textarea */
+.bespoke-form .text-area {
+    resize: none;
+}
+
+/* Submit Button */
+.btn-craftsman {
+    background: var(--contact-primary);
+    color: #ffffff;
+    border: none;
+    padding: 1.2rem 3rem;
+    border-radius: 50px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-craftsman::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--contact-accent);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    z-index: -1;
+}
+
+.btn-craftsman:hover {
+    color: #ffffff;
+    box-shadow: 0 10px 25px -5px rgba(200, 159, 86, 0.4);
+    transform: translateY(-3px);
+}
+
+.btn-craftsman:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.btn-craftsman .btn-icon svg {
+    transition: transform 0.3s ease;
+}
+
+.btn-craftsman:hover .btn-icon svg {
+    transform: translateX(5px);
+}
+
+/* Beautiful Bespoke Illustrations CSS */
+.decor-illustration {
+    position: absolute;
+    mix-blend-mode: multiply; /* Crucial for white-background generated images */
+    opacity: 0.9;
+    pointer-events: none;
+    z-index: 2;
+    filter: drop-shadow(0px 10px 10px rgba(0,0,0,0.05));
+}
+
+.decor-armchair {
+    width: 320px;
+    bottom: -40px;
+    left: -120px;
+    transform: rotate(-8deg);
+}
+
+.decor-plant {
+    width: 250px;
+    top: -50px;
+    right: -80px;
+    transform: rotate(5deg);
+}
+
+/* Responsive Overrides */
+@media (max-width: 991.98px) {
+    .contact-form-inner {
+        padding: 3rem;
+    }
+    .contact-header .heading {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .contact-form-inner {
+        padding: 2.5rem 1.5rem;
+    }
+    .contact-header .heading {
+        font-size: 2.2rem;
+    }
+    .contact-showcase-box {
+        border-radius: 16px;
+    }
+    .btn-craftsman {
+        width: 100%;
+        padding: 1rem 2rem;
+    }
+}

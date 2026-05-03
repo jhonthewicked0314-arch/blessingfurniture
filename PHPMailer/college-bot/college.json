@@ -1,0 +1,511 @@
+{
+    "college_name": "Kovai Kalaimagal College of Arts and Science",
+    "abbreviation": "KKCAS",
+    "motto": "Light the Light Within",
+    "establishment": {
+        "year": 1996,
+        "established_date": "23/09/1996",
+        "established_by": "Kovai Kalaimagal Educational Trust",
+        "autonomous_status_granted": 2016,
+        "years_of_service": 28
+    },
+    "location": {
+        "address": "Vellimalaipattinam, Narasipuram (Post), Thondamuthur (Via)",
+        "city": "Coimbatore",
+        "district": "Coimbatore",
+        "state": "Tamil Nadu",
+        "country": "India",
+        "pincode": "641109",
+        "area": "Narasipuram"
+    },
+    "contact_information": {
+        "phone_numbers": {
+            "office": "+91 422 297 0132",
+            "office_alternate": "0422-2970131",
+            "controller_of_examinations": {
+                "office": "9994069808",
+                "coe": "9788806815",
+                "assistant_coe": "9384439936"
+            },
+            "placement_cell": [
+                "8122969238",
+                "9629403665"
+            ],
+            "general": "9790038605"
+        },
+        "email": {
+            "controller_of_examinations": "coe.kkcas@kkcas.edu.in",
+            "library": "library@kkcas.edu.in"
+        },
+        "website": "http://www.kkcas.edu.in/"
+    },
+    "accreditation_and_recognition": {
+        "university_affiliation": "Bharathiar University, Coimbatore",
+        "ugc_approved": true,
+        "naac_accreditation": {
+            "current_grade": "A+",
+            "current_cgpa": 3.34,
+            "first_cycle": "A",
+            "second_cycle": "A",
+            "third_cycle": "A+",
+            "validity_until": "19-12-2027"
+        },
+        "autonomous_status": true,
+        "autonomous_since": 2016,
+        "type": "Private Self-Financing"
+    },
+    "campus_details": {
+        "campus_size": "10 acres",
+        "type": "Co-educational",
+        "environment": "Set in invigorating ambience, far from the madding crowd"
+    },
+    "student_information": {
+        "total_enrollment": 768,
+        "gender_distribution": {
+            "male": 322,
+            "female": 337,
+            "ratio": "1:1"
+        },
+        "level_distribution": {
+            "undergraduate": "93%",
+            "postgraduate": "7%"
+        }
+    },
+    "faculty_information": {
+        "teaching_faculty_count": 45,
+        "principal": {
+            "name": "Dr. K. Ramamurthi",
+            "designation": "Principal"
+        },
+        "dean_commerce": {
+            "name": "Dr. V. Vijayalakshmi",
+            "designation": "Dean – Commerce"
+        }
+    },
+    "courses_offered": {
+        "total_courses": 32,
+        "total_programs": 21,
+        "degree_types": 9,
+        "streams": [
+            "Science",
+            "Commerce",
+            "Management",
+            "IT & Software",
+            "Computer Applications"
+        ],
+        "undergraduate_programs": {
+            "b_com": {
+                "name": "Bachelor of Commerce",
+                "specializations": [
+                    "General",
+                    "Computer Application (CA)",
+                    "Professional Accounting (PA)"
+                ],
+                "duration": "3 years",
+                "intake": 120
+            },
+            "b_sc": {
+                "name": "Bachelor of Science",
+                "specializations": [
+                    "Computer Science",
+                    "Information Technology",
+                    "Artificial Intelligence & Machine Learning",
+                    "Artificial Intelligence and Data Science",
+                    "Mathematics",
+                    "Mathematics (Computer Application)"
+                ],
+                "duration": "3 years",
+                "intake": 120
+            },
+            "bba": {
+                "name": "Bachelor of Business Administration",
+                "specializations": [
+                    "General",
+                    "Computer Applications"
+                ],
+                "duration": "3 years",
+                "intake": 50
+            },
+            "bca": {
+                "name": "Bachelor of Computer Applications",
+                "duration": "3 years",
+                "intake": 60
+            }
+        },
+        "postgraduate_programs": {
+            "m_com": {
+                "name": "Master of Commerce",
+                "duration": "2 years"
+            },
+            "m_sc": {
+                "name": "Master of Science",
+                "specializations": [
+                    "Information Technology",
+                    "Computer Science"
+                ],
+                "duration": "2 years"
+            },
+            "mba": {
+                "name": "Master of Business Administration",
+                "specializations": [
+                    "International Business"
+                ],
+                "duration": "2 years"
+            }
+        },
+        "doctoral_programs": {
+            "phd": {
+                "name": "Doctor of Philosophy",
+                "fields": [
+                    "Commerce",
+                    "Computer Science",
+                    "Various Branches"
+                ]
+            },
+            "m_phil": {
+                "name": "Master of Philosophy",
+                "available": true
+            }
+        },
+        "diploma_programs": {
+            "pg_diploma": {
+                "name": "Post Graduate Diploma",
+                "available": true
+            }
+        }
+    },
+    "fee_structure": {
+        "fee_range": {
+            "minimum": "₹7,000",
+            "maximum": "₹2,20,000"
+        },
+        "undergraduate_fees": {
+            "range": "₹84,000 - ₹1,50,000",
+            "b_sc_fees": "₹84,000 - ₹1,50,000 (entire duration)",
+            "starting_from": "₹9,000"
+        },
+        "postgraduate_fees": {
+            "m_com": "₹68,000 (entire duration)",
+            "m_sc": "₹68,000 (entire duration)",
+            "mba": "₹2,20,000"
+        }
+    },
+    "infrastructure_and_facilities": {
+        "library": {
+            "establishment_year": 1996,
+            "area": "3,905 sq.ft",
+            "seating_capacity": 60,
+            "total_books": 14668,
+            "journals_and_magazines": 65,
+            "kkace_library": {
+                "area": "613 sq.ft",
+                "seating_capacity": 30,
+                "books": 237
+            },
+            "memberships": [
+                "N-LIST",
+                "DELNET",
+                "NDL"
+            ],
+            "automation_software": "College Management System (CMS)",
+            "library_timing": "8:30 AM to 4:30 PM",
+            "librarian": {
+                "name": "Mrs. N.V. Deepalatha",
+                "qualification": "MLISC, DCA"
+            },
+            "lending_rules": {
+                "ug_cards": 3,
+                "pg_cards": 5,
+                "fine_per_day": "₹1 per book per day"
+            }
+        },
+        "computer_labs": {
+            "total_computers": 306,
+            "number_of_labs": 4,
+            "managed_by": "Experienced system engineers",
+            "description": "State-of-the-art computer lab with latest machines and software"
+        },
+        "hostel": {
+            "boys_hostel": {
+                "available": true,
+                "location": "Within campus",
+                "capacity": 102,
+                "facilities": [
+                    "Indoor games",
+                    "First-year dedicated hostel"
+                ]
+            },
+            "girls_hostel": {
+                "available": true,
+                "location": "Within campus",
+                "capacity": 102,
+                "facilities": [
+                    "Separate facility",
+                    "Secure environment"
+                ]
+            }
+        },
+        "classrooms": {
+            "description": "Spacious, well-furnished classrooms",
+            "additional_facilities": [
+                "Seminar hall",
+                "Syndicate room",
+                "Special discussion hall",
+                "Audio-visual equipped hall"
+            ]
+        },
+        "auditorium": {
+            "capacity": 1300,
+            "features": [
+                "Noise reducing facility"
+            ]
+        },
+        "sports_facilities": {
+            "available_sports": [
+                "Ball Badminton",
+                "Volleyball",
+                "Basketball",
+                "Kabaddi",
+                "Kho-Kho"
+            ]
+        },
+        "other_facilities": [
+            "Wi-Fi enabled campus",
+            "Transport facility from city",
+            "Canteen",
+            "Gymnasium",
+            "Medical facility with first aid",
+            "Ambulance service (24/7)",
+            "ATM within compound",
+            "Car parking",
+            "Internet access",
+            "Shop"
+        ]
+    },
+    "technology_and_automation": {
+        "erp_system": {
+            "name": "Enterprise Resource Planning (ERP)",
+            "modules": [
+                "Student Database",
+                "Admission forms",
+                "Transfer Certificate",
+                "Bonafide Certificates",
+                "Fees Management",
+                "Human Resource",
+                "Hostel Management",
+                "Academic Management",
+                "Finance and Accounting"
+            ]
+        },
+        "cms": {
+            "name": "College Management System",
+            "used_for": "Library automation and overall college management"
+        }
+    },
+    "rankings": {
+        "india_today_2021": {
+            "rank": 61,
+            "category": "Overall"
+        },
+        "outlook": {
+            "recognized": true
+        },
+        "open_magazine": {
+            "ranked": true
+        }
+    },
+    "placements": {
+        "placement_cell": {
+            "contact": [
+                "8122969238",
+                "9629403665"
+            ],
+            "services": [
+                "Placement training schemes",
+                "Industry visits",
+                "Expert faculty sessions",
+                "Workshops on resume writing",
+                "Interview skills development",
+                "Soft skills training",
+                "Career guidance and counseling"
+            ]
+        },
+        "major_recruiters": [
+            "Cognizant",
+            "Infosys",
+            "TCS",
+            "Wipro",
+            "HDFC Bank",
+            "Nvidia",
+            "CISCO",
+            "Genpact",
+            "Amazon",
+            "Integra Micro Systems"
+        ],
+        "industry_collaborations": {
+            "sectors": [
+                "IT",
+                "Finance",
+                "Biotechnology",
+                "Commerce"
+            ],
+            "services": [
+                "Internships",
+                "Joint research projects",
+                "MoU's"
+            ]
+        },
+        "dvs": {
+            "name": "Digital Verification System",
+            "purpose": "Placement verification"
+        }
+    },
+    "academic_features": {
+        "admission_process": {
+            "basis": "Merit-based",
+            "application_period": "May-June (after 12th results)",
+            "academic_year_start": "August-September",
+            "eligibility": {
+                "ug": "10+2 or equivalent from recognized board",
+                "pg": "Bachelor's degree in relevant subject from recognized university"
+            }
+        },
+        "examination_system": {
+            "cia": "Continuous Internal Assessment",
+            "eae": "End Assessment Examinations",
+            "results_timeline": "Within 15 days from last exam date"
+        },
+        "quality_initiatives": [
+            "Outcome-Based Education (OBE)",
+            "Program Outcomes (PO's) and Course Outcomes (CO's)",
+            "NAAC guidelines compliance"
+        ]
+    },
+    "research_and_development": {
+        "research_cell": "Active Research and Development Cell",
+        "activities": [
+            "Research projects for faculty and students",
+            "National and international conferences",
+            "Workshops and seminars",
+            "Publication in reputed journals",
+            "Industry collaborations for research"
+        ]
+    },
+    "clubs_and_activities": {
+        "student_clubs": [
+            "Literary Club",
+            "Fine Arts Club",
+            "Sports Club",
+            "Science Club"
+        ],
+        "social_service": {
+            "nss": "National Service Scheme",
+            "yrc": "Youth Red Cross",
+            "rrc": "Red Ribbon Club",
+            "ncc": "National Cadet Corps"
+        },
+        "kkace": "Kovai Kalaimagal Academy for Competitive Examinations"
+    },
+    "departments": [
+        "Computer Science",
+        "BCA",
+        "Information Technology",
+        "Commerce",
+        "Commerce (CA)",
+        "Commerce (PA)",
+        "BBA (CA)",
+        "English",
+        "Tamil",
+        "Mathematics",
+        "International Business"
+    ],
+    "student_support_services": {
+        "career_guidance": true,
+        "counseling_cell": true,
+        "scholarships": "Available",
+        "code_of_conduct": "Established",
+        "alumni_association": {
+            "active": true,
+            "services": [
+                "Regular reunions",
+                "Networking events",
+                "Mentoring current students",
+                "Internship and job opportunities"
+            ]
+        }
+    },
+    "ratings_and_reviews": {
+        "shiksha": {
+            "overall_rating": "3.62/5",
+            "campus_life": "3.7/5",
+            "placements": "3.6/5",
+            "faculty": "4.2/5",
+            "infrastructure": "3.4/5"
+        },
+        "justdial": {
+            "rating": "4.4/5",
+            "total_ratings": 302
+        }
+    },
+    "social_media": {
+        "facebook": "https://www.facebook.com/kkcas.edu",
+        "instagram": "https://www.instagram.com/kovai_kalaimagal_cbe/"
+    },
+    "entrance_exams_accepted": [
+        "TANCET (for MBA/MCA)"
+    ],
+    "vision_and_mission": {
+        "vision": "To emerge as a leading center of academic excellence and social responsibility, fostering professionals equipped to meet the dynamic demands of the global workforce",
+        "mission": "To empower students through quality education, innovative research, and community engagement. To raise professionals and leaders of high academic competence and untarnished personality with strong motivation and commitment to serve humankind"
+    },
+    "key_highlights": [
+        "28 years of outstanding service",
+        "NAAC A+ accredited with 3.34 CGPA",
+        "Autonomous status since 2016",
+        "10-acre campus",
+        "Co-educational institution",
+        "45 experienced faculty members",
+        "768 student enrollment",
+        "32 courses across 4 streams",
+        "State-of-the-art infrastructure",
+        "Strong industry interface",
+        "Active placement cell",
+        "Research-oriented environment",
+        "Wi-Fi enabled campus",
+        "Separate hostel facilities for boys and girls",
+        "Comprehensive library with digital resources"
+    ],
+    "faqs": [
+        {
+            "category": "General",
+            "question": "Why should I choose Kovai Kalaimagal College of Arts and Science?",
+            "answer": "Kovai Kalaimagal College of Arts and Science (KKCAS) is an autonomous institution graded 'A+' by NAAC. We prioritize a research-oriented environment, strong industry collaboration for placements, excellent academic results, state-of-the-art facilities across 10-acres of green campus, and a focus on raising professionals with strong morals."
+        },
+        {
+            "category": "General",
+            "question": "About this college?",
+            "answer": "Established in 1996, Kovai Kalaimagal College is run by the Kovai Kalaimagal Educational Trust. Our motto is 'Light the Light Within', reflecting our goal to empower students and foster both academic and personal excellence."
+        },
+        {
+            "category": "Admission",
+            "question": "How can I apply?",
+            "answer": "You can apply online via our website or visit the campus directly with your essential documents like 12th marksheets, ID proof, and photographs. Admissions are purely merit-based."
+        },
+        {
+            "category": "Fees",
+            "question": "What is the fee structure?",
+            "answer": "The fee structure varies based on the course you select. Typically, undergraduate (UG) programs range from ₹84,000 to ₹1,50,000 for the entire duration, while PG courses like MBA can be around ₹2,20,000. It is best to visit the college admission office for exact details."
+        },
+        {
+            "category": "Hostel",
+            "question": "Are hostel facilities available?",
+            "answer": "Yes, we proudly provide secure hostel facilities for both boys and girls within the college campus. Both hostels have a capacity of 102 students each and offer excellent amenities like indoor games, mess, and 24/7 security."
+        },
+        {
+            "category": "Placements",
+            "question": "How are the placements?",
+            "answer": "We have an exceptional placement record with an active Training and Placement Cell. Our recruiters include top-tier companies like Amazon, Cognizant, Infosys, and TCS. Last year, a vast majority of students successfully found jobs right from the campus."
+        }
+    ],
+    "last_updated": "2026-03-31"
+}

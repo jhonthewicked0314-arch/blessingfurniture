@@ -1,0 +1,1476 @@
+/* ============================================
+   RESPONSIVE — Full Site
+   Breakpoints: 991px (tablet), 768px (mobile), 480px (small mobile)
+   ============================================ */
+
+/* --- Hamburger Menu Button (hidden on desktop) --- */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    z-index: 1001;
+    position: relative;
+}
+
+/* Hide mobile CTA on desktop */
+.mobile-cta {
+    display: none;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--white);
+    margin: 5px 0;
+    border-radius: 2px;
+    transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+    transform-origin: center;
+}
+
+.site-header.scrolled .menu-toggle span {
+    background: var(--dark);
+}
+
+/* Hamburger → X animation */
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+
+/* ============================================
+   TABLET BREAKPOINT  (max-width: 991px)
+   ============================================ */
+@media (max-width: 991px) {
+
+    /* --- Show hamburger --- */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* --- Header compacted --- */
+    .site-header {
+        height: 74px;
+        padding: 0 20px;
+    }
+
+    .logo a {
+        font-size: 20px;
+    }
+
+    /* --- Mobile nav overlay --- */
+    .main-nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 280px;
+        height: 100vh;
+        height: 100dvh;
+        background: rgba(26, 15, 8, 0.97);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        z-index: 999;
+        padding: 90px 32px 40px;
+        transform: translateX(100%);
+        transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        overflow-y: auto;
+        box-shadow: -10px 0 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .main-nav.open {
+        transform: translateX(0);
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .main-nav ul li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .main-nav ul li:last-child {
+        border-bottom: none;
+    }
+
+    .main-nav a {
+        display: block;
+        padding: 16px 0;
+        font-size: 16px;
+        color: var(--white) !important;
+        letter-spacing: 0.5px;
+    }
+
+    .main-nav a::after {
+        display: none;
+    }
+
+    /* --- Header action (Book Now) --- */
+    .header-action {
+        display: none;
+    }
+
+    /* Show it inside mobile nav instead */
+    .main-nav .mobile-cta {
+        display: block;
+        margin-top: 28px;
+        text-align: center;
+    }
+
+    .main-nav .mobile-cta .btn-book-now {
+        display: inline-block;
+        background: var(--primary);
+        border-color: var(--primary);
+        color: var(--white);
+        padding: 12px 32px;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* --- Nav overlay backdrop --- */
+    .nav-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.45);
+        z-index: 998;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.35s ease, visibility 0.35s ease;
+    }
+
+    .nav-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* --- Hero Banner compact for tablet --- */
+    .hero-banner {
+        height: 75vh;
+    }
+
+    .slide-content {
+        max-width: 85%;
+        padding-left: 6%;
+    }
+
+    .hero-title {
+        font-size: 46px;
+    }
+
+    .hero-subtitle {
+        font-size: 17px;
+        margin-bottom: 28px;
+    }
+
+    .script-label {
+        font-size: 24px;
+    }
+
+    .btn-outline {
+        font-size: 14px;
+        padding: 10px 28px;
+    }
+
+    .slider-nav {
+        bottom: 28px;
+        right: 28px;
+    }
+
+    .slider-nav button {
+        width: 40px;
+        height: 40px;
+    }
+
+    .slider-nav button svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* --- Showcase Section --- */
+    .showcase-section {
+        padding: 60px 0;
+    }
+
+    /* --- Detail Intro Section --- */
+    .detail-intro-sec {
+        padding: 80px 0;
+    }
+
+    .about-img-wrapper img {
+        height: 500px;
+    }
+
+    /* --- Category Gallery --- */
+    .category-gallery-sec {
+        padding: 60px 0;
+    }
+
+    /* --- How It Works --- */
+    .how-it-works-sec {
+        padding: 60px 0;
+    }
+
+    /* --- Worksamrsd / Most Requested --- */
+    .worksamrsd {
+        padding: 60px 0;
+    }
+
+    .worksamrsd .swiper-slide {
+        height: 450px;
+        max-height: 450px;
+    }
+
+    .worksamrsd .swiper-slide .text-holder {
+        padding: 15px 28px;
+    }
+
+    .worksamrsd h4.title-block {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .worksamrsd .swiper-slide .text-holder p {
+        font-size: 14px;
+    }
+
+    .work-smar-right {
+        padding: 40px 30px;
+    }
+
+    .work-smar-right .slider-button-prev,
+    .work-smar-right .slider-button-next {
+        width: 70px;
+        height: 70px;
+    }
+
+    /* --- Videography / Connect --- */
+    .videography-detail {
+        padding: 4rem 0;
+    }
+
+    .sfr-feature-card {
+        height: 450px;
+    }
+
+    /* --- Perfect Space --- */
+    .perfect-space-sec {
+        padding: 60px 0;
+    }
+
+    .feature-img {
+        height: 180px;
+    }
+
+    .feature-info {
+        padding: 20px;
+    }
+
+    .feature-title {
+        font-size: 20px;
+    }
+
+    .feature-text {
+        font-size: 14px;
+    }
+
+    /* --- Commitment --- */
+    .commitment {
+        padding: 1.5rem 0;
+    }
+
+    .commitment .main-title {
+        font-size: 22px;
+        letter-spacing: 5px;
+    }
+
+    .commitment p {
+        font-size: 16px;
+    }
+}
+
+
+/* ============================================
+   MOBILE BREAKPOINT  (max-width: 768px)
+   ============================================ */
+@media (max-width: 768px) {
+    
+    .footer-bg-image {
+        background-size: contain;
+    background-repeat: no-repeat;
+    top: 21rem;
+    }
+
+    /* --- Hero Banner shorter & cleaner --- */
+    .hero-banner {
+        height: 65vh;
+        min-height: 420px;
+        max-height: 560px;
+    }
+
+    .slide-content {
+        max-width: 92%;
+        padding-left: 5%;
+        padding-right: 5%;
+        justify-content: center;
+        padding-bottom: 60px;
+    }
+
+    .script-label {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .hero-title {
+        font-size: 32px;
+        line-height: 1.15;
+        margin-bottom: 10px;
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 22px;
+        opacity: 0.85;
+    }
+
+    .btn-outline {
+        font-size: 12px;
+        padding: 10px 24px;
+        letter-spacing: 0.5px;
+    }
+
+    /* Navigation arrows small & tucked */
+    .slider-nav {
+        bottom: 18px;
+        right: 16px;
+        gap: 8px;
+    }
+
+    .slider-nav button {
+        width: 36px;
+        height: 36px;
+    }
+
+    .slider-nav button svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    /* Progress bar tighter */
+    .slider-progress {
+        bottom: 2px;
+        gap: 2px;
+        padding: 0 3px;
+    }
+
+    .progress-segment {
+        height: 2px;
+    }
+
+    /* Slide BG gradient stronger on mobile for readability */
+    .slide-bg::after {
+        background: linear-gradient(
+            to right,
+            rgba(44, 26, 14, 0.92) 0%,
+            rgba(44, 26, 14, 0.55) 50%,
+            rgba(44, 26, 14, 0.25) 100%
+        );
+    }
+
+    /* --- Section headings scale down --- */
+    .section-title {
+        font-size: 28px;
+    }
+
+    .section-script {
+        font-size: 26px;
+    }
+
+    .section-desc {
+        font-size: 14px;
+    }
+
+    .section-heading {
+        margin-bottom: 36px;
+    }
+
+    /* --- Showcase Section --- */
+    .showcase-section {
+        padding: 50px 0;
+    }
+
+    .marquee-container {
+        margin-bottom: 24px;
+    }
+
+    .product-item {
+        width: 160px;
+    }
+
+    .product-img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .product-name {
+        font-size: 14px;
+        margin-top: 8px;
+    }
+
+    /* --- Key Numbers --- */
+    .key-number-decor {
+        padding: 1.5rem 0;
+    }
+
+    .kue-numerbsd {
+        flex-wrap: wrap;
+        gap: 5px 0;
+        justify-content: center;
+    }
+
+    .kue-numerbsd li.key-images {
+        display: none;
+    }
+
+    .kue-numerbsd li.grid {
+        min-width: 140px;
+        width: 50%;
+        padding: 15px 5px;
+    }
+
+    .kue-numerbsd .counter,
+    .kue-numerbsd span:not(.counter) {
+        font-size: 42px;
+    }
+
+    .kue-numerbsd h4 {
+        font-size: 13px;
+        margin-top: 6px;
+    }
+
+    /* --- Detail Intro Section --- */
+    .detail-intro-sec {
+        padding: 50px 0;
+    }
+
+    .about-img-wrapper {
+        margin-left: 15px;
+    }
+
+    .about-img-wrapper img {
+               width: unset;
+    }
+
+    .about-img-wrapper::before {
+        top: 15px;
+        left: -15px;
+    }
+
+    .about-content {
+        padding-left: 0;
+        margin-top: 40px;
+    }
+
+    .about-content p {
+        font-size: 15px;
+        line-height: 1.7;
+        margin-bottom: 16px;
+    }
+
+    .about-content .btn-book-now {
+        padding: 12px 28px;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    /* --- Category Gallery --- */
+    .category-gallery-sec {
+        padding: 50px 0;
+    }
+
+    .category-tabs-wrap {
+        margin-bottom: 28px;
+        justify-content: flex-start;
+    }
+
+    .category-tabs {
+        padding-bottom: 8px;
+    }
+
+    .cat-tab {
+        padding: 6px 16px;
+        font-size: 13px;
+    }
+
+    .cat-tab-thumb {
+        width: 34px;
+        height: 34px;
+    }
+
+    .cat-slide-card {
+        height: 320px;
+    }
+
+    /* --- How It Works --- */
+    .how-it-works-sec {
+        padding: 50px 0;
+    }
+
+    .how-it-works-sec .section-heading {
+        margin-bottom: 36px !important;
+    }
+
+    .hiw-image-panel {
+        height: 280px;
+        margin-bottom: 28px;
+        border-radius: 12px;
+    }
+
+    .hiw-header {
+        padding: 16px 18px;
+        gap: 12px;
+    }
+
+    .hiw-number {
+        font-size: 26px;
+        min-width: 36px;
+    }
+
+    .hiw-title {
+        font-size: 15px;
+    }
+
+    .hiw-body {
+        padding: 0 18px 0 66px;
+    }
+
+    .hiw-item.active .hiw-body {
+        padding: 0 18px 18px 66px;
+    }
+
+    .hiw-body p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    /* --- Perfect Space Section --- */
+    .perfect-space-sec {
+        padding: 50px 0;
+    }
+
+    .feature-card {
+        margin-bottom: 0;
+    }
+
+    .feature-img {
+        height: 170px;
+    }
+
+    .feature-info {
+        padding: 18px 16px;
+    }
+
+    .feature-title {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    .feature-text {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    /* =========================================
+       WORKSAMRSD / MOST REQUESTED — CRITICAL
+       ========================================= */
+    .worksamrsd {
+        padding: 50px 0;
+    }
+
+    /* Kill the half-width background on mobile — go full width */
+    .worksamrsd:before {
+        width: 100%;
+    }
+
+    /* Stack: text on top, swiper below */
+    .worksamrsd .col-lg-4 {
+        order: 1;
+    }
+
+    .worksamrsd .col-lg-8 {
+        order: 2;
+    }
+
+    .work-smar-right {
+        padding: 0 20px 30px;
+        text-align: center;
+    }
+
+    .work-smar-right .section-heading {
+        text-align: center !important;
+    }
+
+    .work-smar-right .section-title {
+        font-size: 24px;
+    }
+
+    .work-smar-right .section-script {
+        font-size: 22px;
+    }
+
+    .work-smar-right p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    /* Nav buttons — smaller and centered */
+    .work-smar-right .dsn-pagination {
+        margin-top: 1.5rem;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .work-smar-right .slider-button-prev,
+    .work-smar-right .slider-button-next {
+        width: 56px;
+        height: 56px;
+    }
+
+    .work-smar-right .slider-button-prev .arrow-svg,
+    .work-smar-right .slider-button-next .arrow-svg {
+        width: 20px;
+        height: 16px;
+    }
+
+    /* Swiper slides — much shorter */
+    .worksamrsd .swiper-slide {
+        height: 320px;
+        max-height: 320px;
+    }
+
+    /* Text holder inside slides */
+    .worksamrsd .swiper-slide .text-holder {
+        padding: 12px 20px;
+    }
+
+    .worksamrsd h4.title-block {
+        font-size: 16px;
+        margin-bottom: 8px;
+        padding-bottom: 8px;
+    }
+
+    .worksamrsd h4.title-block:after {
+        width: 30px;
+    }
+
+    .worksamrsd .swiper-slide .text-holder p {
+        font-size: 13px;
+        line-height: 1.5;
+        margin-bottom: 5px;
+    }
+
+    .explore-mores {
+        font-size: 11px;
+        margin-top: 10px;
+        padding-left: 24px;
+    }
+
+    .explore-mores:before {
+        width: 16px;
+    }
+
+    /* =========================================
+       VIDEOGRAPHY / LET'S CONNECT SECTION
+       ========================================= */
+    .videography-detail {
+        padding: 3rem 0;
+    }
+
+    .videography-detail .section-heading {
+        margin-bottom: 30px !important;
+    }
+
+    .sfr-feature-card {
+        height: 340px;
+        border-radius: 16px !important;
+        margin-bottom: 16px;
+    }
+
+    .videography-detail .sfr-left-rounded {
+        border-radius: 16px !important;
+    }
+
+    .videography-detail .sfr-right-rounded {
+        border-radius: 16px !important;
+    }
+
+    .sfr-overlay-content {
+        padding: 24px;
+    }
+
+    .sfr-overlay-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .sfr-overlay-content p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .video-btn {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    /* Center box */
+    .videography-detail .sfr-center-box {
+        padding: 40px 24px;
+        min-height: 280px;
+        margin-bottom: 16px;
+    }
+
+    .sfr-center-box h4 {
+        font-size: 1.1rem !important;
+    }
+
+    .videography-detail .sfr-center-box p {
+        font-size: 13px !important;
+    }
+
+    .videography-detail .sfr-center-box::before {
+        top: 14px;
+        left: 14px;
+        width: 120px;
+        height: 120px;
+    }
+
+    .videography-detail .sfr-center-box::after {
+        bottom: 14px;
+        right: 14px;
+        width: 120px;
+        height: 120px;
+    }
+
+    .weddibtn.animated-btn {
+        padding: 12px 28px;
+        font-size: 13px;
+    }
+
+    /* Blur gradients smaller */
+    .videography-detail .gradine-1 {
+        width: 50px;
+        height: 80px;
+    }
+
+    .videography-detail .gradine-2 {
+        width: 40px;
+        height: 120px;
+    }
+
+    /* --- Commitment Section --- */
+    .commitment {
+        padding: 1.5rem 0;
+    }
+
+    .commitment .main-title {
+        font-size: 20px;
+        letter-spacing: 4px;
+        margin-bottom: 20px;
+    }
+
+    .commitment p {
+        font-size: 15px;
+        margin-bottom: 28px !important;
+    }
+
+    .footer-commitment img {
+        height: 45px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .footer-commitment h4 {
+        font-size: 14px !important;
+    }
+
+    /* --- Footer --- */
+    .footer-main-content {
+        padding: 50px 5% 30px;
+    }
+
+    .footer-logo {
+        font-size: 22px;
+    }
+
+    .footer-tagline {
+        font-size: 12px;
+    }
+
+    .footer-contact-details .contact-line span {
+        font-size: 12px;
+    }
+
+    .footer-heading {
+        font-size: 10px;
+    }
+
+    .footer-links a,
+    .working-hours p {
+        font-size: 12px;
+        line-height: 2;
+    }
+
+    .footer-links-row {
+        margin-top: 24px;
+    }
+
+    .footer-bottom-bar {
+        margin-top: 24px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    .footer-copyright,
+    .footer-credits {
+        font-size: 10px;
+    }
+}
+
+
+/* ============================================
+   GLOBAL FIX: Inner pages force scrolled header
+   (contact, about, collections pages have no hero behind header)
+   ============================================ */
+.contact-page-body .site-header,
+.about-page-body .site-header,
+.collections-page-body .site-header {
+    background: var(--cream);
+    border-bottom: 1px solid var(--primary);
+}
+
+.contact-page-body .site-header .logo a,
+.about-page-body .site-header .logo a,
+.collections-page-body .site-header .logo a {
+    color: var(--dark);
+}
+
+.contact-page-body .site-header .main-nav a,
+.about-page-body .site-header .main-nav a,
+.collections-page-body .site-header .main-nav a {
+    color: var(--dark);
+}
+
+.contact-page-body .site-header .btn-book-now,
+.about-page-body .site-header .btn-book-now,
+.collections-page-body .site-header .btn-book-now {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: var(--white);
+}
+
+.contact-page-body .site-header .menu-toggle span,
+.about-page-body .site-header .menu-toggle span,
+.collections-page-body .site-header .menu-toggle span {
+    background: var(--dark);
+}
+
+/* ============================================
+   TABLET (max-width: 991px) — Additions
+   ============================================ */
+@media (max-width: 991px) {
+
+    /* Logo image scaling for compact header */
+    .logo img {
+        width: 90px !important;
+        height: auto !important;
+    }
+
+    /* Breadcrumb — reduce padding */
+    .breadcrumb-secc {
+        padding: 150px 0 62px
+    }
+
+    .breadcumb-title {
+        font-size: 42px;
+    }
+
+    .breadcrumb-navigation li,
+    .breadcrumb-navigation a {
+        font-size: 15px;
+    }
+
+    /* Videography center box fix */
+    .videography-detail .sfr-center-box {
+        height: auto;
+        min-height: 400px;
+    }
+
+    .sfr-feature-card {
+        height: 400px;
+    }
+
+    /* About page — why choose */
+    .why-choose-section {
+        padding: 80px 0;
+    }
+}
+
+/* ============================================
+   MOBILE (max-width: 768px) — Full Overhaul
+   ============================================ */
+@media (max-width: 768px) {
+
+    /* --- Logo for mobile --- */
+    .logo img {
+        width: 90px !important;
+        height: auto !important;
+    }
+
+    /* --- Breadcrumb section — compact & clean --- */
+    .breadcrumb-secc {
+        padding: 150px 0 62px
+    }
+
+    .breadcumb-title {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+    .breadcrumb-navigation {
+        margin-top: 14px;
+        padding: 0 14px;
+    }
+
+    .breadcrumb-navigation li,
+    .breadcrumb-navigation a {
+        font-size: 13px;
+        margin-right: 10px;
+        padding-right: 10px;
+        letter-spacing: 0.5px;
+    }
+
+    .breadcrumb-navigation::before,
+    .breadcrumb-navigation::after {
+        width: 7px;
+        height: 7px;
+        top: 6px;
+    }
+
+    .breadcrumb-navigation::after {
+        right: 10px;
+    }
+
+    /* --- Footer section mobile --- */
+    .site-footer {
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
+
+    .footer-main-row {
+        padding: 0 20px;
+    }
+
+    .footer-logo {
+        font-size: 24px;
+    }
+
+    .footer-heading {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .footer-links a {
+        font-size: 13px;
+        line-height: 2;
+    }
+
+    .footer-socials {
+        margin-top: 16px;
+    }
+
+    .footer-bottom-bar {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    /* --- Videography / Let's Connect --- */
+    .videography-detail .sfr-center-box {
+        height: auto;
+        min-height: 260px;
+        padding: 32px 20px;
+    }
+
+    .videography-detail .sfr-center-box::before,
+    .videography-detail .sfr-center-box::after {
+        width: 80px;
+        height: 80px;
+    }
+
+    .sfr-feature-card {
+        height: 300px;
+    }
+
+    /* --- About Page: Why Choose Section --- */
+    .why-choose-section {
+        padding: 60px 0;
+    }
+
+    .why-left h2 {
+        font-size: 28px;
+    }
+
+    .why-pullquote {
+        padding: 16px 20px;
+        margin: 20px 0;
+    }
+
+    .why-pullquote p {
+        font-size: 17px;
+    }
+
+    .why-icon-card {
+        padding: 22px 20px;
+        margin-bottom: 12px;
+    }
+
+    .why-icon-card h4 {
+        font-size: 16px;
+    }
+
+    /* --- About Page: Process Section --- */
+    .process-section .section-heading {
+        margin-bottom: 40px;
+    }
+
+    .process-num {
+        width: 60px;
+        height: 60px;
+        font-size: 22px;
+    }
+
+    .process-img {
+        height: 160px;
+    }
+
+    .process-step h4 {
+        font-size: 18px;
+    }
+
+    /* --- About Page: Materials --- */
+    .material-item {
+        padding: 24px 16px;
+        margin-bottom: 16px;
+    }
+
+    .material-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    /* --- About Page: Gallery --- */
+    .gallery-section {
+        padding: 60px 0;
+    }
+
+    .gallery-item {
+        margin-bottom: 14px;
+        border-radius: 10px;
+    }
+
+    /* --- About Page: FAQ --- */
+    .faq-header {
+        padding: 18px 20px;
+    }
+
+    .faq-question {
+        font-size: 14px;
+    }
+
+    .faq-body p {
+        font-size: 14px;
+    }
+
+    .faq-item.active .faq-body {
+        padding: 0 20px 20px 20px;
+        margin-left: 8px;
+    }
+
+    /* --- About Page: Hero --- */
+    .about-hero {
+        padding: 40px 0 60px;
+    }
+
+    .hero-img-frame {
+        transform: rotate(0deg);
+    }
+
+    .hero-content-col .script-tag {
+        font-size: 22px;
+    }
+
+    .hero-signature {
+        font-size: 22px;
+    }
+
+    /* --- About Page: Welcome cards stacking fix --- */
+    .welcome-section {
+        padding: 60px 0;
+    }
+
+    .welcome-heading-block {
+        margin-bottom: 40px;
+    }
+
+    .welcome-heading-block h2 {
+        font-size: 28px;
+    }
+
+    .welcome-heading-block .intro-text {
+        font-size: 15px;
+    }
+
+    .welcome-card-1,
+    .welcome-card-2,
+    .welcome-card-3 {
+        margin-top: 20px;
+    }
+
+    .wc-card-body {
+        padding: 24px 20px;
+    }
+
+    .wc-card-body h3 {
+        font-size: 20px;
+    }
+
+    /* --- About: Vision Mission --- */
+    .vm-section {
+        padding: 60px 0;
+    }
+
+    .vm-card {
+        padding: 32px 24px;
+        margin-bottom: 20px;
+    }
+
+    .vm-card h3 {
+        font-size: 24px;
+    }
+
+    /* --- About: Testimonials --- */
+    .testimonials-section {
+        padding: 60px 0;
+    }
+
+    /* --- Contact page --- */
+    .contact-page-wrapper {
+        padding: 1rem 0;
+    }
+
+    .contact-showcase-box {
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    .contact-header .subheading {
+        font-size: 1.6rem;
+    }
+
+    .contact-header .description {
+        font-size: 0.95rem;
+    }
+}
+
+/* ============================================
+   SMALL MOBILE (max-width: 480px) — Extra polish
+   ============================================ */
+@media (max-width: 480px) {
+
+    /* Header tighter */
+    .site-header {
+        height: 74px;
+        padding: 0 14px;
+    }
+
+    .main-nav {
+        padding-top: 72px;
+    }
+
+    .logo img {
+        width: 90px !important;
+        height: auto !important;
+    }
+
+    /* Breadcrumb even more compact */
+    .breadcrumb-secc {
+        padding: 150px 0 62px
+    }
+
+    .breadcumb-title {
+        font-size: 24px;
+    }
+
+    .breadcrumb-navigation li,
+    .breadcrumb-navigation a {
+        font-size: 12px;
+        margin-right: 8px;
+        padding-right: 8px;
+    }
+
+    /* Hero banner */
+    .hero-title {
+        font-size: 26px;
+    }
+
+    .hero-subtitle {
+        font-size: 13px;
+    }
+
+    .script-label {
+        font-size: 18px;
+    }
+
+    .btn-outline {
+        font-size: 11px;
+        padding: 8px 20px;
+    }
+
+    /* Section headings */
+    .section-title {
+        font-size: 24px;
+    }
+
+    .section-script {
+        font-size: 22px;
+    }
+
+    /* Showcase circles smaller */
+    .product-item {
+        width: 130px;
+    }
+
+    .product-img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .product-name {
+        font-size: 12px;
+    }
+
+    /* Key numbers */
+    .kue-numerbsd .counter,
+    .kue-numerbsd span:not(.counter) {
+        font-size: 34px;
+    }
+
+    .kue-numerbsd h4 {
+        font-size: 11px;
+    }
+
+    .kue-numerbsd li.grid {
+        min-width: 120px;
+    }
+
+    /* About image */
+    .about-img-wrapper img {
+        height: 350px;
+    }
+
+    /* Feature cards */
+    .feature-img {
+        height: 150px;
+    }
+
+    .feature-title {
+        font-size: 16px;
+    }
+
+    .feature-text {
+        font-size: 12px;
+    }
+
+    /* Worksamrsd slider */
+    .worksamrsd .swiper-slide {
+        height: 260px;
+        max-height: 260px;
+    }
+
+    .work-smar-right .section-title {
+        font-size: 22px;
+    }
+
+    .work-smar-right .slider-button-prev,
+    .work-smar-right .slider-button-next {
+        width: 48px;
+        height: 48px;
+    }
+
+    /* How it works */
+    .hiw-image-panel {
+        height: 220px;
+    }
+
+    .hiw-header {
+        padding: 14px 14px;
+        gap: 10px;
+    }
+
+    .hiw-number {
+        font-size: 22px;
+        min-width: 32px;
+    }
+
+    .hiw-title {
+        font-size: 13px;
+    }
+
+    .hiw-body p {
+        font-size: 13px;
+    }
+
+    /* Category gallery */
+   .cat-tab {
+        padding: 5px 12px;
+        font-size: 12px;
+    }
+
+    .cat-tab-thumb {
+        width: 28px;
+        height: 28px;
+    }
+
+    /* Videography */
+    .sfr-feature-card {
+        height: 250px;
+    }
+
+    .sfr-overlay-content {
+        padding: 16px;
+    }
+
+    .sfr-overlay-content h3 {
+        font-size: 1rem;
+    }
+
+    .sfr-overlay-content p {
+        font-size: 13px;
+    }
+
+    .weddibtn.animated-btn {
+        padding: 10px 22px;
+        font-size: 12px;
+    }
+
+    /* Commitment */
+    .commitment .main-title {
+        font-size: 16px;
+        letter-spacing: 3px;
+    }
+
+    .commitment p {
+        font-size: 14px;
+    }
+
+    /* Footer */
+    .footer-logo {
+        font-size: 22px;
+    }
+
+    .footer-main-row {
+        padding: 0 16px;
+    }
+
+    /* Contact page */
+    .contact-form-inner {
+        padding: 2rem 1.2rem;
+    }
+
+    .contact-header .heading {
+        font-size: 1.8rem;
+    }
+
+    .contact-header .subheading {
+        font-size: 1.4rem;
+    }
+
+    .bespoke-form .premium-input {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .btn-craftsman {
+        padding: 0.85rem 1.5rem;
+        font-size: 0.95rem;
+    }
+
+    /* About hero */
+    .hero-content-col h1 {
+        font-size: 26px;
+    }
+
+    .hero-img-frame img {
+        height: 260px;
+    }
+
+    .hero-content-col p {
+        font-size: 14px;
+    }
+
+    /* About why choose */
+    .why-left h2 {
+        font-size: 24px;
+    }
+
+    .why-left p {
+        font-size: 14px;
+    }
+
+    .why-pullquote p {
+        font-size: 15px;
+    }
+
+    /* About VM cards */
+    .vm-card {
+        padding: 28px 20px;
+    }
+
+    .vm-card h3 {
+        font-size: 22px;
+    }
+
+    .vm-card p {
+        font-size: 14px;
+    }
+
+    /* FAQ */
+    .faq-header {
+        padding: 14px 16px;
+        gap: 12px;
+    }
+
+    .faq-question {
+        font-size: 13px;
+    }
+
+    .faq-toggle {
+        width: 30px;
+        height: 30px;
+    }
+}
+

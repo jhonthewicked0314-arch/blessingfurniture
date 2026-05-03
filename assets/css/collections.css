@@ -1,0 +1,481 @@
+/* ============================================
+   Our Collections Page
+   ============================================ */
+.collections-page-body {
+    background-color: #FAFAFA;
+}
+
+/* Page Heading */
+.collections-heading {
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 10px;
+}
+.collections-heading h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: #1A4A4A;
+    margin-bottom: 10px;
+}
+.collections-heading .script-label {
+    font-family: 'Great Vibes', cursive;
+    color: #B5651D;
+    font-size: 28px;
+    display: block;
+    margin-bottom: -5px;
+}
+.collections-heading .wavy-line {
+    margin-bottom: 20px;
+}
+.collections-heading p {
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+/* Tab Navigation */
+.collections-tabs-wrapper {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.collections-tabs {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 15px;
+}
+.coll-tab {
+    background-color: transparent;
+    border: 1px solid #ddd;
+    color: #555;
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.coll-tab:hover {
+    border-color: #B5651D;
+    color: #B5651D;
+}
+.coll-tab.active {
+    background-color: #B5651D;
+    border-color: #B5651D;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(181, 101, 29, 0.2);
+}
+
+/* Product Grid */
+.collections-grid-wrapper {
+    padding-bottom: 80px;
+}
+.coll-panel {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+.coll-panel.active {
+    display: block;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.coll-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 30px);
+}
+.coll-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+}
+.coll-card-img {
+    position: relative;
+    padding-top: 100%; /* 1:1 aspect ratio */
+    overflow: hidden;
+    background-color: #f8f8f8;
+}
+.coll-card-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.coll-card:hover .coll-card-img img {
+    transform: scale(1.05);
+}
+.coll-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #B5651D;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 30px;
+    z-index: 2;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.coll-card-footer {
+    background: #1A4A4A;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+}
+.coll-card-name {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.3;
+}
+.coll-card-btn {
+    background: rgba(255,255,255,0.1);
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+.coll-card-btn svg {
+    width: 18px;
+    height: 18px;
+    fill: #fff;
+    transition: transform 0.3s ease;
+}
+.coll-card-btn:hover {
+    background: #B5651D;
+}
+.coll-card-btn:hover svg {
+    transform: translateX(2px);
+}
+
+/* Modal */
+.coll-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    padding: 20px;
+}
+.coll-modal-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+body.coll-modal-open {
+    overflow: hidden;
+}
+.coll-modal {
+    background: #fff;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 30px;
+    position: relative;
+    transform: translateY(20px) scale(0.95);
+    transition: all 0.3s ease;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+}
+.coll-modal-overlay.open .coll-modal {
+    transform: translateY(0) scale(1);
+}
+.coll-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #f1f1f1;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.coll-modal-close:hover {
+    background: #ffebe5;
+}
+.coll-modal-close svg {
+    width: 18px;
+    height: 18px;
+    stroke: #555;
+    stroke-width: 2;
+}
+.coll-modal-close:hover svg {
+    stroke: #d93025;
+}
+.coll-modal-product-name {
+    font-family: 'Playfair Display', serif;
+    color: #1A4A4A;
+    font-size: 28px;
+    margin-bottom: 5px;
+    padding-right: 40px;
+}
+.coll-modal-divider {
+    height: 1px;
+    background: #eee;
+    margin: 20px 0;
+}
+
+/* Form Groups inside Modal */
+.coll-form-group {
+    margin-bottom: 24px;
+}
+.coll-form-label {
+    display: block;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+.coll-pill-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.coll-pill {
+    background: #f8f8f8;
+    border: 1px solid #e0e0e0;
+    color: #555;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+.coll-pill:hover {
+    border-color: #bbb;
+}
+.coll-pill.selected {
+    background: #1A4A4A;
+    color: #fff;
+    border-color: #1A4A4A;
+}
+
+.coll-swatch-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.coll-swatch {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 1px #ddd;
+    transition: all 0.2s ease;
+    margin: 0 auto 5px;
+}
+.coll-swatch[data-color="Teak Brown"] { background: #5c3a21; }
+.coll-swatch[data-color="Dark Walnut"] { background: #3b2818; }
+.coll-swatch[data-color="Natural Light"] { background: #dcb38a; }
+.coll-swatch[data-color="Off White"] { background: #fdfdfd; }
+.coll-swatch[data-color="Matte Grey"] { background: #888888; }
+.coll-swatch[data-color="Custom"] { background: conic-gradient(red, yellow, lime, aqua, blue, magenta, red); }
+
+.coll-swatch:hover {
+    transform: scale(1.1);
+}
+.coll-swatch.selected {
+    box-shadow: 0 0 0 2px #B5651D;
+    transform: scale(1.1);
+}
+.coll-swatch-label {
+    display: block;
+    font-size: 12px;
+    color: #666;
+}
+.coll-custom-color-input {
+    display: none;
+    margin-top: 15px;
+}
+.coll-custom-color-input.visible {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+.coll-input, .coll-textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    transition: border-color 0.3s;
+    background: #fafafa;
+}
+.coll-input:focus, .coll-textarea:focus {
+    outline: none;
+    border-color: #B5651D;
+    background: #fff;
+}
+
+/* Modal Actions */
+.coll-modal-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 30px;
+}
+.coll-btn-whatsapp, .coll-btn-email {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+.coll-btn-whatsapp {
+    background: #25D366;
+    color: #fff;
+}
+.coll-btn-whatsapp:hover {
+    background: #128C7E;
+}
+.coll-btn-whatsapp svg {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+}
+.coll-btn-email {
+    background: #fff;
+    border: 2px solid #1A4A4A;
+    color: #1A4A4A;
+}
+.coll-btn-email:hover {
+    background: #1A4A4A;
+    color: #fff;
+}
+.coll-btn-email svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+}
+
+/* Toast */
+.coll-toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: #333;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-size: 15px;
+    z-index: 10000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+.coll-toast.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+.coll-toast.success { background: #4CAF50; }
+.coll-toast.error { background: #F44336; }
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .collections-heading h1 {
+        font-size: 32px;
+    }
+    .collections-heading p {
+        font-size: 14px;
+        padding: 0 15px;
+    }
+    .collections-tabs {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding-bottom: 10px;
+        -webkit-overflow-scrolling: touch;
+    }
+    .collections-tabs::-webkit-scrollbar {
+        height: 4px;
+    }
+    .collections-tabs::-webkit-scrollbar-thumb {
+        background: #ddd;
+        border-radius: 4px;
+    }
+    .coll-tab {
+        white-space: nowrap;
+        font-size: 14px;
+        padding: 8px 18px;
+    }
+    .coll-card-footer {
+        padding: 12px 15px;
+    }
+    .coll-card-name {
+        font-size: 14px;
+    }
+    .coll-modal-actions {
+        grid-template-columns: 1fr;
+    }
+    .coll-modal {
+        padding: 20px;
+    }
+    .coll-modal-product-name {
+        font-size: 22px;
+    }
+}
+@media (max-width: 480px) {
+    .coll-card-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .coll-card-btn {
+        align-self: flex-end;
+    }
+}
